@@ -8,11 +8,6 @@ if (!isset($_POST))
 	
 
 $pi = new Handler($_POST, $_SERVER['REMOTE_ADDR']);
-
-
-
-
-
 $conn->close();
 
 ?>

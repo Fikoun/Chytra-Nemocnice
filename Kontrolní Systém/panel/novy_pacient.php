@@ -435,88 +435,79 @@ include 'php/header.php';
         <!-- ============================================================== -->
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
-                    <!-- ============================================================== -->
-                    <!-- pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h2 class="pageheader-title">Seznam pacientů
-                                    <a href="novy_pacient.php" class="btn btn-success float-right">
-                                        <i class="fas fa-plus fa-lg"></i>
-                                    </a>
-                                </h2>
-                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                                
+                <div class="container-fluid  dashboard-content">
+                <!-- ============================================================== -->
+                <!-- pageheader -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-header">
+                            <h2 class="pageheader-title">Nový Pacient</h2>
+                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                            <div class="page-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    
+                                </nav>
                             </div>
                         </div>
                     </div>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="ecommerce-widget">         
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Pacienti</h5>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead class="bg-light">
-                                                    <tr class="border-0">
-                                                        <th class="border-0">#</th>
-                                                        <th class="border-0">Jméno</th>
-                                                        <th class="border-0">pokoj</th>
-                                                        <th class="border-0">poslední kontrola</th>
-                                                        <th class="border-0">důvod hospitalizace</th>
-                                                        
-                                                        
-                                                        
-                                                        <th class="border-0">Detail</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-<?php
-include 'php/connect.php';
-
-$sql = "SELECT * FROM patients";
-$result = mysqli_query($conn,$sql);
-
-
-mysqli_fetch_all($result,MYSQLI_ASSOC);
-
-foreach ($result as $patient) {
-?>
-
-    <tr>
-        <td><?= $patient['id'] ?></td>
-        <td><?= $patient['first_name']." ".$patient['last_name'] ?></td>
-        <td><?= $patient['room_number'] ?></td>
-        <td>před 30 min TODO</td>
-        <td><?= $patient['reason'] ?></td>
-        <td>
-            <a href="#" class="btn btn-info">
-                <i class="fas fa-eye fa-lg"></i>
-            </a>
-        </td>     
-    </tr>
-
-<?php
-}
-?>  
-                                                    
-                                                    
-                                                    
-                                                </tbody>
-                                            </table>
+                </div>
+                <!-- ============================================================== -->
+                <!-- end pageheader -->
+                <!-- ============================================================== -->
+             
+                    <div class="row">
+                        <!-- ============================================================== -->
+                        <!-- validation form -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <h5 class="card-header">Zadejte informace o pacientovi</h5>
+                                <div class="card-body">
+                                    <form class="needs-validation" novalidate="">
+                                        <div class="row"><div class="form-group col-12">
+                                            <label for="inputUserName">Křestní Jméno</label>
+                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                        </div><div class="form-group col-12">
+                                            <label for="inputUserName">Příjmení</label>
+                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                        </div><div class="form-group col-12">
+                                            <label for="inputUserName">Datum narození</label>
+                                            <input id="inputUserName" type="date" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                        </div><div class="form-group col-12">
+                                            <label for="inputUserName">Důvod Hospitalizace</label>
+                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                        </div><div class="form-group col-12">
+                                            <label for="inputUserName">VZP</label>
+                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div>
-                                    </div>
+    
+                                            
+                                            
+                                          
+    
+                                        </div>
+                                        <div class="form-row">
+                                            
+                                            
+                                            
+                                            
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-                            </div>       
+                            </div>
                         </div>
-                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end validation form -->
+                        <!-- ============================================================== -->
                     </div>
+                    
+                    
+           
+            </div>
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
