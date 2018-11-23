@@ -1,56 +1,29 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
-		<title>Chytrá Nemocnice</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="stylesheet" href=".\assets\css\bootstrap.min.css">
-		<link rel="stylesheet" href=".\assets\fontawesome\css\all.css">
-		<link rel="stylesheet" href=".\assets\css\style.css">
-	</head>
-
-	<body>
-
-		<div class="container">
-
-			
-			  <div class="container">
-			    <div class="row">
-			      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-			        <div class="card card-signin my-5">
-			          <div class="card-body">
-			            <h5 class="card-title text-center">Přihlaste se</h5>
-			            <form class="form-signin">
-			              <div class="form-label-group">
-			                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-			                <label for="inputEmail">Přihlašovací jméno</label>
-			              </div>
-
-			              <div class="form-label-group">
-			                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-			                <label for="inputPassword">Heslo</label>
-			              </div>
-
-			              <div class="custom-control custom-checkbox mb-3">
-			                <input type="checkbox" class="custom-control-input" id="customCheck1">
-			                <label class="custom-control-label" for="customCheck1">Pamatovat si heslo </label>
-			              </div>
-			              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Přihlásit</button>
-			            </form>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
-
-
-
+<?php
+   include("login_form.php");
+   session_start();
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = mysqli_real_escape_string($db,$_POST['username']);
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      
+      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
+      $result = mysqli_query($db,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
 		
-		<script src=".\assets\js\jquery.min.js"></script>
-		<script src=".\assets\js\bootstrap.min.js"></script>
-		<script src=".\assets\fontawesome\js\all.js"></script>
-	</body>
-
-
-</html>
+      if($count == 1) {
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         
+         header("location: welcome.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
+?>
