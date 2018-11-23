@@ -497,7 +497,7 @@ foreach ($result as $patient) {
         <td>před 30 min TODO</td>
         <td><?= $patient['reason'] ?></td>
         <td>
-            <a href="#" class="btn btn-info">
+            <a href="detail.php?id=<?= $patient['id'] ?>" class="btn btn-info">
                 <i class="fas fa-eye fa-lg"></i>
             </a>
         </td>     
