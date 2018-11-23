@@ -464,22 +464,23 @@ include 'php/header.php';
                             <div class="card">
                                 <h5 class="card-header">Zadejte informace o pacientovi</h5>
                                 <div class="card-body">
-                                    <form class="needs-validation" >
+
+                                    <form class="needs-validation" novalidate="" action="php/newpatient.php" method="POST">
                                         <div class="row"><div class="form-group col-12">
                                             <label for="inputUserName">Křestní Jméno</label>
-                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="first" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Příjmení</label>
-                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="last" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Datum narození</label>
-                                            <input id="inputUserName" type="date" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="birth" id="inputUserName" type="date"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Důvod Hospitalizace</label>
-                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="reason" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">VZP</label>
-                                            <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="vzp" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div>
     
                                             

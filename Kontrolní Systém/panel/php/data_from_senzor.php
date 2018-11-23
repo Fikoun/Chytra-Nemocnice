@@ -1,4 +1,5 @@
 <?php
+/*vložení dat o uživateli z jeho raspberry*/
 include 'connect.php';
 
 if (!isset($_POST))

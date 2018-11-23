@@ -1,4 +1,5 @@
 <?php
+/*vložení dat o novém členu personálu*/
 include 'connect.php';
 
 if (!isset($_POST))

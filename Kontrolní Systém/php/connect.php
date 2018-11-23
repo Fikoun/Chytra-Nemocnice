@@ -1,5 +1,6 @@
 <?php
-$servername = "localhost";
+/* připojení do databáze*/
+$servername = "localhost"; 
 $username = "root";
 $password = "";
 $dbname = "projekt_nemocnice";
