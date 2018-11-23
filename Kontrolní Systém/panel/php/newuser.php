@@ -13,4 +13,4 @@ if (!isset($_POST))
 
 	$conn->close();
 }else
-	header("location: ../../")
+	header("location: ../../") 
