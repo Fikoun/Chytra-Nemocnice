@@ -1,4 +1,5 @@
 <?php
+/*vložení dat o pacientovi při jeho hospitalizaci*/
 include 'connect.php';
 
 if (!isset($_POST))

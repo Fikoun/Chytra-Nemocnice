@@ -1,4 +1,5 @@
 <?php
+/*odeslání a kontrola dat z formuláře na přihlášení*/
    session_start();
    include("connect.php");
   
