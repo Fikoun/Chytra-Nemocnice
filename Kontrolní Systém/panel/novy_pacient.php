@@ -464,7 +464,7 @@ include 'php/header.php';
                             <div class="card">
                                 <h5 class="card-header">Zadejte informace o pacientovi</h5>
                                 <div class="card-body">
-                                    <form class="needs-validation" novalidate="">
+                                    <form class="needs-validation" >
                                         <div class="row"><div class="form-group col-12">
                                             <label for="inputUserName">Křestní Jméno</label>
                                             <input id="inputUserName" type="text" name="name" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
