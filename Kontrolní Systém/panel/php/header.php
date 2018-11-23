@@ -1,9 +1,9 @@
 <?php 
     session_start();
 
-    if (isset($_SESSION['id'])) {
-         header("Location: panel.php");
-    } else header("Location: prihlaseni.php");
+    if (!isset($_SESSION['id'])) {
+ 		header("Location: ../prihlaseni.php");
+	}
 ?>
 
 <!DOCTYPE html>
