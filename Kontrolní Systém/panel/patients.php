@@ -484,6 +484,7 @@ $sql = "SELECT * FROM patients";
 $result = mysqli_query($conn,$sql);
 
 
+
 mysqli_fetch_all($result,MYSQLI_ASSOC);
 
 foreach ($result as $patient) {
