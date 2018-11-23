@@ -1,10 +1,18 @@
-<?php include 'php/header.php'; ?>
+<!DOCTYPE html>
+<html>
 
-<link rel="stylesheet" href="./assets/css/login-page.css">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href=".\assets\css\bootstrap.min.css">
+		<link rel="stylesheet" href=".\assets\fontawesome\css\all.css">
+		<link rel="stylesheet" href=".\assets\css\style.css">
+
+		<link rel="stylesheet" href="./assets/css/login-page.css">
 
 
-<title>Příhlášení</title>
-</head>
+		<title>Přihlášení</title>
+	</head>
 
 <body>
 
@@ -18,12 +26,12 @@
 	        <h5 class="card-title text-center">Přihlaste se</h5>
 	        <form class="form-signin" action="./php/login.php" method="POST">
 	          <div class="form-label-group">
-	            <input type="user" id="inputUser" class="form-control" placeholder="user" required autofocus>
+	            <input name="user" type="user" id="inputUser" class="form-control" placeholder="user" required autofocus>
 	            <label for="inputUser">Přihlašovací jméno</label>
 	          </div>
 
 	          <div class="form-label-group">
-	            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+	            <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
 	            <label for="inputPassword">Heslo</label>
 	          </div>
 
