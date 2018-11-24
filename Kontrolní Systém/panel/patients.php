@@ -52,7 +52,7 @@ include 'php/header.php';
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 18/3 </span> žádá o resuscitaci
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 18/3 </span> má zvýšené tep
                                                         <div class="notification-date">12 minutes ago</div>
                                                     </div>
                                                 </div>

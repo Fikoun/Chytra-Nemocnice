@@ -52,7 +52,7 @@ include 'php/header.php';
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 18/3 </span> žádá o resuscitaci
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 18/3 </span> má zvýšený tep
                                                         <div class="notification-date">12 minutes ago</div>
                                                     </div>
                                                 </div>
@@ -179,35 +179,35 @@ include 'php/header.php';
                                     <form class="needs-validation" novalidate="" action="php/newpatient.php" method="POST">
                                         <div class="row"><div class="form-group col-12">
                                             <label for="inputUserName">Křestní Jméno</label>
-                                            <input name="first" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="first" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Vložte křestní jméno pacienta" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Příjmení</label>
-                                            <input name="last" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="last" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Vložte příjmení pacienta" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Datum narození</label>
-                                            <input name="birth" id="inputUserName" type="date" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="birth" id="inputUserName" type="date" data-parsley-trigger="change" required="" placeholder="Datum narození pacienta ve formátu dd/mm/rrrr/" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Důvod Hospitalizace</label>
-                                            <input name="reason" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="reason" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Napište důvod přijetí pacienta" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">VZP</label>
-                                            <input name="vzp" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="vzp" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Napište pacientovu pojišťovnu" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Číslo pokoje</label>
-                                            <input name="room_number" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="room_number" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Na kterém pokoji bude pacient ubytován" autocomplete="off" class="form-control">
                                         </div>
 
 <div class="form-group col-12">
                                             <label for="inputUserName">Léčba</label>
-                                            <input name="treatment" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="treatment" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Napište první léčbu, která bude aplikována" autocomplete="off" class="form-control">
                                         </div>
 <div class="form-group col-12">
                                             <label for="inputUserName">Stravování</label>
-                                            <input name="diet" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="diet" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Napište zda bude pacient potřebovat speciální úpravu stravy" autocomplete="off" class="form-control">
                                         </div>
 <div class="form-group col-12">
                                             <label for="inputUserName">Komentář</label>
-                                            <input name="comment" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="comment" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Napište cokoliv co je potřebova o pacientovi vědět" autocomplete="off" class="form-control">
                                         </div>
 
     
