@@ -144,10 +144,10 @@ include 'php/header.php';
                 <!-- ============================================================== -->
                 <!-- pageheader -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+               <div class="row">
+                    <div class="col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Události</h2>
+                            <h2 class="pageheader-title">Služby - Ambulance</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
@@ -160,60 +160,53 @@ include 'php/header.php';
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-             
-                  <div class="col-12">
-                            <!-- ============================================================== -->
-                            <!-- custom content list  -->
-                            <!-- ============================================================== -->
+               
+                    <div class="row">
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-12">
                             <div class="card">
-                                <h5 class="card-header">Nejnovější události</h5>
+                                <h5 class="card-header">Rozpis Sester</h5>
                                 <div class="card-body">
-                                    <div class="list-group">
-                                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1 text-white">Pacient 18 umřel</h5>
-                                                <small>4 minutes ago</small>
-                                            </div>
-                                            <p class="mb-1">Na pokoji 42 umřel pacient 18. Kontaktujte neprodleně rodinu.</p>
-                                            <small>mrtvola</small>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">Zaneste léky pacientům</h5>
-                                                <small class="text-muted">55 minutes ago</small>
-                                            </div>
-                                            <p class="mb-1">Pacientům 5, 11 a 22 ležících na pokoji 36 je potřeba zanést jejich léky.</p>
-                                            <small class="text-muted">teplota</small>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">Zástava srdce u pacienta 7 na pokoji 11</h5>
-                                                <small class="text-muted">2 hours ago</small>
-                                            </div>
-                                            <p class="mb-1">Pacient zkolaboval. Neprodleně poskytněte první pomoc</p>
-                                            <small class="text-muted">Zástava</small>
-                                        </a>
-                                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                                            <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">Zajděte si na oběd.</h5>
-                                                <small class="text-muted">5 hours ago</small>
-                                            </div>
-                                            <p class="mb-1">Máte polední pauzu. Zajděte si do nemocniční kantýny pro něco na zub.</p>
-                                            <small class="text-muted">Oběd</small>
-                                        </a>
-                                    </div>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Jméno</th>
+                                                <th scope="col">Příjmení</th>
+                                                <th scope="col">doba</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Tereza</td>
+                                                <td>Nevímkdo</td>
+                                                <td>dopolední od 6:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Lucie</td>
+                                                <td>Jakubíková</td>
+                                                <td>odpolední od 14:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Dominika</td>
+                                                <td>Dobrovolná</td>
+                                                <td>Noční od 21:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <!-- ============================================================== -->
-                            <!-- end custom content list  -->
-                            <!-- ============================================================== -->
                         </div>
-                    
-                    
-           
-            </div>
-                </div>
-                </div>
+                      
+                    </div>
+                    <div class="row">
+                        
+               
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
