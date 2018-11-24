@@ -43,32 +43,32 @@ include 'php/header.php';
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
-                                                        <div class="notification-date">2 min ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 25/5  </span> potřebuje Vaši pomoc!!
+                                                        <div class="notification-date">30 seconds ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
-                                                        <div class="notification-date">2 days ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 18/3 </span> žádá o resuscitaci
+                                                        <div class="notification-date">12 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
-                                                        <div class="notification-date">2 min ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 77/11</span> žádá sestru o asistenci
+                                                        <div class="notification-date">24 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
-                                                        <div class="notification-date">2 min ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 69/7</span> má dostat obvyklé léky
+                                                        <div class="notification-date">36 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -121,7 +121,7 @@ include 'php/header.php';
                                 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="food.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Stravování</a>
+                                <a class="nav-link" href="food.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-utensil-spoon"></i>Stravování</a>
                                 
                             </li>
                             <li class="nav-item ">
@@ -166,6 +166,65 @@ include 'php/header.php';
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
+                <div class="row">
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-12">
+                            <div class="card">
+                                <h5 class="card-header">Můj rozpis služeb</h5>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Den</th>
+                                                <th scope="col">Oddělení</th>
+                                                <th scope="col">Doba</th>
+                                                <th scope="col">Čas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">24.11.</th>
+                                                <td>Ambulance</td>
+                                                <td>Ranní</td>
+                                                <td>6:00 - 14:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">25.11. </th>
+                                                <td>Urgentní příjem</td>
+                                                <td>Ranní</td>
+                                                <td>7:00 - 15:30</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">26.11 -> 27.11</th>
+                                                <td>Ambulance</td>
+                                                <td>Noční</td>
+                                                <td>23:00 - 7:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">27.11 </th>
+                                                <td>Ambulance</td>
+                                                <td>Odpolední</td>
+                                                <td>14:00 - 22:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">30.11</th>
+                                                <td>Urgentní příjem</td>
+                                                <td>ranní</td>
+                                                <td>6:00 - 14:30</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+                        
+               
+            </div>
                
                     <div class="row">
                     </div>
@@ -173,7 +232,7 @@ include 'php/header.php';
                         
                         <div class="col-12">
                             <div class="card">
-                                <h5 class="card-header">Rozpis sester</h5>
+                                <h5 class="card-header">Rozpis sester 24.11.</h5>
                                 <div class="card-body">
                                     <table class="table table-bordered">
                                         <thead>
@@ -232,7 +291,7 @@ include 'php/header.php';
                         
                         <div class="col-12">
                             <div class="card">
-                                <h5 class="card-header">Rozpis lékařů</h5>
+                                <h5 class="card-header">Rozpis lékařů 24.11.</h5>
                                 <div class="card-body">
                                     <table class="table table-bordered">
                                         <thead>
