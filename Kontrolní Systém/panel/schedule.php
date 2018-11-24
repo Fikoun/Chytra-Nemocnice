@@ -108,7 +108,7 @@ include 'php/header.php';
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active collapsed" href="index.php" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fas fa-exclamation-circle"></i>Události<span class="badge badge-success">6</span></a>
+                                <a class="nav-link  collapsed" href="index.php" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fas fa-exclamation-circle"></i>Události<span class="badge badge-success">6</span></a>
                                 
                             </li>
                             <li class="nav-item">
@@ -116,11 +116,11 @@ include 'php/header.php';
                                 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="schedule.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Rozpis Služeb</a>
+                                <a class="nav-link active" href="schedule.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Rozpis Služeb</a>
                                 
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="settings.php" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-cog"></i>Nastavení</a>
+                                <a class="nav-link" href="../prihlaseni.php" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-cog"></i>Log Out</a>
                                 
                             </li>
  
@@ -147,9 +147,10 @@ include 'php/header.php';
                <div class="row">
                     <div class="col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Služby - Ambulance</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                            <div class="page-breadcrumb">
+                            <a href="index.php" class="btn btn-primary">
+                <i class="fa fa-arrow-left fa-lg"></i>
+            </a>
+                    <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     
                                 </nav>
