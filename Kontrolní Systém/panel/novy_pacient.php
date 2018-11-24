@@ -179,35 +179,35 @@ include 'php/header.php';
                                     <form class="needs-validation" novalidate="" action="php/newpatient.php" method="POST">
                                         <div class="row"><div class="form-group col-12">
                                             <label for="inputUserName">Křestní Jméno</label>
-                                            <input name="first" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="first" id="inputUserName" type="text" data-parsley-trigger="change" required="" value="Antonín" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Příjmení</label>
-                                            <input name="last" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input value="Neduchal" name="last" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Datum narození</label>
-                                            <input name="birth" id="inputUserName" type="date" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input value="02/10/1995" name="birth" id="inputUserName" type="date" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Důvod Hospitalizace</label>
-                                            <input name="reason" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input value="Hnisavá Angína" name="reason" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">VZP</label>
-                                            <input name="vzp" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input value="54318" name="vzp" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Číslo pokoje</label>
-                                            <input name="room_number" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input value="3" name="room_number" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div>
 
 <div class="form-group col-12">
                                             <label for="inputUserName">Léčba</label>
-                                            <input name="treatment" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input value="Nazazení penicilinu, pokud se stav do 4 dnů nezlepší, bude zvážena možnost odstranění krčních mandlí" name="treatment" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div>
 <div class="form-group col-12">
                                             <label for="inputUserName">Stravování</label>
-                                            <input name="diet" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input value="Řídká, kašovitá strava" name="diet" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div>
 <div class="form-group col-12">
                                             <label for="inputUserName">Komentář</label>
-                                            <input name="comment" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input value="Přijat dne 24.11.2018" name="comment" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div>
 
     
@@ -222,7 +222,7 @@ include 'php/header.php';
                                             
                                             
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                                <button class="btn btn-primary" type="submit">Zapsat Pacienta</button>
                                             </div>
                                         </div>
                                     </form>
