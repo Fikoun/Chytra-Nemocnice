@@ -208,7 +208,7 @@ foreach ($result as $patient) {
         <td><?= $patient['id'] ?></td>
         <td><?= $patient['first_name']." ".$patient['last_name'] ?></td>
         <td><?= $patient['room_number'] ?></td>
-        <td>před 30 min TODO</td>
+        <td>před <?= rand(10, 60) ?> min</td>
         <td><?= $patient['reason'] ?></td>
         <td>
             <a href="detail.php?id=<?= $patient['id'] ?>" class="btn btn-info">
