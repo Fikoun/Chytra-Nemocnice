@@ -14,11 +14,11 @@ include 'php/header.php';
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Smart Hospital na kraji města</title>
+    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
 </head>
 
 <body>
-   <!-- ============================================================== -->
+     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
@@ -27,7 +27,7 @@ include 'php/header.php';
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Smart Hospital</a>
+                <a class="navbar-brand" href="index.html">Concept</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -174,37 +174,20 @@ include 'php/header.php';
                                     <form class="needs-validation" novalidate="" action="php/newpatient.php" method="POST">
                                         <div class="row"><div class="form-group col-12">
                                             <label for="inputUserName">Křestní Jméno</label>
-                                            <input name="first" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="first" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Příjmení</label>
-                                            <input name="last" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="last" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Datum narození</label>
-                                            <input name="birth" id="inputUserName" type="date" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="birth" id="inputUserName" type="date"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Důvod Hospitalizace</label>
-                                            <input name="reason" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="reason" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">VZP</label>
-                                            <input name="vzp" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div><div class="form-group col-12">
-                                            <label for="inputUserName">Číslo pokoje</label>
-                                            <input name="room_number" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
+                                            <input name="vzp" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
                                         </div>
-
-<div class="form-group col-12">
-                                            <label for="inputUserName">Léčba</label>
-                                            <input name="treatment" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div>
-<div class="form-group col-12">
-                                            <label for="inputUserName">Stravování</label>
-                                            <input name="diet" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div>
-<div class="form-group col-12">
-                                            <label for="inputUserName">Komentář</label>
-                                            <input name="comment" id="inputUserName" type="text" data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div>
-
     
                                             
                                             
@@ -218,13 +201,6 @@ include 'php/header.php';
                                             
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                 <button class="btn btn-primary" type="submit">Submit form</button>
-                                            </div>
-                                        </div>
-                                    </form>
-    
-                                            
-                                            
-                                
                                             </div>
                                         </div>
                                     </form>
