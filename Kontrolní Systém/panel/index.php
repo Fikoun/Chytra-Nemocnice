@@ -175,11 +175,11 @@ include 'php/header.php';
                                     <div class="list-group">
                                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
                                             <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1 text-white">Pacient 18 umřel</h5>
+                                                <h5 class="mb-1 text-white">Pokoj 14 žádá URGENTNĚ sestru</h5>
                                                 <small>4 minutes ago</small>
                                             </div>
-                                            <p class="mb-1">Na pokoji 42 umřel pacient 18. Kontaktujte neprodleně rodinu.</p>
-                                            <small>mrtvola</small>
+                                            <p class="mb-1">Na pokoji 14 je okamžitě požadována sestra!</p>
+                                            <small>URGENT</small>
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="d-flex w-100 justify-content-between">
@@ -187,15 +187,15 @@ include 'php/header.php';
                                                 <small class="text-muted">55 minutes ago</small>
                                             </div>
                                             <p class="mb-1">Pacientům 5, 11 a 22 ležících na pokoji 36 je potřeba zanést jejich léky.</p>
-                                            <small class="text-muted">teplota</small>
+                                            <small class="text-muted">léky</small>
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="d-flex w-100 justify-content-between">
-                                                <h5 class="mb-1">Zástava srdce u pacienta 7 na pokoji 11</h5>
+                                                <h5 class="mb-1">Zajděte na pokoj 13</h5>
                                                 <small class="text-muted">2 hours ago</small>
                                             </div>
-                                            <p class="mb-1">Pacient zkolaboval. Neprodleně poskytněte první pomoc</p>
-                                            <small class="text-muted">Zástava</small>
+                                            <p class="mb-1">Pacient 68/13 vyžaduje návštěvu sestry</p>
+                                            <small class="text-muted">kontrola</small>
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="d-flex w-100 justify-content-between">
