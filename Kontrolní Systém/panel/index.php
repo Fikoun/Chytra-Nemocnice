@@ -163,10 +163,7 @@ include 'php/header.php';
                     <div class="ecommerce-widget">
 
                         
-                        
-                        
-
-                        
+          
                         
                         
                     </div>
