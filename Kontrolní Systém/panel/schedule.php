@@ -173,35 +173,106 @@ include 'php/header.php';
                         
                         <div class="col-12">
                             <div class="card">
-                                <h5 class="card-header">Rozpis Sester</h5>
+                                <h5 class="card-header">Rozpis sester</h5>
                                 <div class="card-body">
                                     <table class="table table-bordered">
                                         <thead>
                                             <tr>
-                                                <th scope="col">#</th>
+                                                <th scope="col">Oddělení</th>
                                                 <th scope="col">Jméno</th>
                                                 <th scope="col">Příjmení</th>
-                                                <th scope="col">doba</th>
+                                                <th scope="col">Doba - Čas</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th scope="row">1</th>
+                                                <th scope="row">Ambulance</th>
                                                 <td>Tereza</td>
                                                 <td>Nevímkdo</td>
-                                                <td>dopolední od 6:00</td>
+                                                <td>ranní od 6:00</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">2</th>
+                                                <th scope="row">Urgentní příjem</th>
                                                 <td>Lucie</td>
                                                 <td>Jakubíková</td>
                                                 <td>odpolední od 14:00</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">3</th>
+                                                <th scope="row">Dětské oddělení</th>
                                                 <td>Dominika</td>
                                                 <td>Dobrovolná</td>
                                                 <td>Noční od 21:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Dětské oddělení</th>
+                                                <td>Marika</td>
+                                                <td>Pokorná</td>
+                                                <td>ranní od 6:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Urgentní příjem</th>
+                                                <td>Simona</td>
+                                                <td>Tullisová</td>
+                                                <td>Noční od 22:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="row">
+                        
+               
+            </div>
+            <div class="row">
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-12">
+                            <div class="card">
+                                <h5 class="card-header">Rozpis lékařů</h5>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Oddělení</th>
+                                                <th scope="col">Jméno</th>
+                                                <th scope="col">Příjmení</th>
+                                                <th scope="col">Doba - Čas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Ambulance</th>
+                                                <td>Tomáš</td>
+                                                <td>Kopřiva</td>
+                                                <td>ranní od 6:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Urgentní příjem</th>
+                                                <td>Anna</td>
+                                                <td>Hamzová</td>
+                                                <td>odpolední od 14:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Dětské oddělení</th>
+                                                <td>Lubomír</td>
+                                                <td>Krabáč</td>
+                                                <td>Noční od 21:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Dětské oddělení</th>
+                                                <td>Olga</td>
+                                                <td>Novotná</td>
+                                                <td>ranní od 6:00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Urgentní příjem</th>
+                                                <td>Lukáš</td>
+                                                <td>Jakubík</td>
+                                                <td>Noční od 22:00</td>
                                             </tr>
                                         </tbody>
                                     </table>

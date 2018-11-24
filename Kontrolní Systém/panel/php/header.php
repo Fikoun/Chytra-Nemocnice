@@ -14,4 +14,4 @@
 
 		<link rel="stylesheet" href=".\..\assets\css\bootstrap.min.css">
 		<link rel="stylesheet" href=".\..\assets\fontawesome\css\all.css">
-		<style type="text/css">body, div, h2, h1, h3, table, td, label {font-family: Tahoma !important; }</style>
+		<style type="text/css">body, div, h2, h1, h3, table, td, label, th {font-family: Tahoma !important; }</style>
