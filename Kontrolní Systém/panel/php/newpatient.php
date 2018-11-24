@@ -9,7 +9,7 @@ if (isset($_POST))
 
 
 
-	$stmt->bind_param("sssiss", $_POST['first'], $_POST['last'], $_POST['birth'], $_POST['vzp'], $_POST['reason'], $_POST['treatment'], $_POST['diet'] );
+	$stmt->bind_param("sssisss", $_POST['first'], $_POST['last'], $_POST['birth'], $_POST['vzp'], $_POST['reason'], $_POST['treatment'], $_POST['diet'] );
 
 	$stmt->execute();
 
