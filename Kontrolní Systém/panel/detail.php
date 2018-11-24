@@ -215,6 +215,20 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
                                     </ul>
                                     </div>
                                 </div>
+
+                                <div class="card-body border-top col-12">
+                                <div class="card border-3 border-top border-top-primary" style="border-top-color: #ff0000 !important;">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">EKG</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1" id="ekg">50</h1>
+                                        </div>
+                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                            <img src="./assets/images/ekg.gif" height="110px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 
                                 
                                 
@@ -271,6 +285,29 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="row"><div class="card-body col-6">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">Teplota Místnosti</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1" id="temp">50</h1>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div><div class="card-body col-6">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">Vlhkost Vzduchu</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1" id="hum">50</h1>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                                                    
                                                 </div>
                                             </div>
                                             
@@ -439,6 +476,32 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+
+
+
+    <script type="text/javascript">
+    	
+		$(document).ready(function($) {
+
+	    	var updateStats =  function () {
+	    		console.log("gettingdata");
+	    		$.ajax({
+					  url: "./php/getdata.php?id=<?= $pacient['id'] ?>"
+				})
+				.done(function( data ) {
+				      data = data.split(",");
+				      $("#temp").text(data[0]);
+				      $("#hum").text(data[1]);
+				      $("#ekg").text(data[2]);
+				});
+	    	}
+
+	    	setInterval(updateStats, 2000);
+
+	    	
+		});
+
+    </script>
 </body>
  
 </html>

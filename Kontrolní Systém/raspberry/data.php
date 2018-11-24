@@ -7,7 +7,9 @@ if (!isset($_POST))
 	header("location: ../");
 	
 
-$pi = new Handler($_POST, $_SERVER['REMOTE_ADDR']);
+$pi = new Handler($conn ,$_POST, $_SERVER['REMOTE_ADDR']);
+$pi->save($conn);
+
 $conn->close();
 
 ?>
