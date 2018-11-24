@@ -13,7 +13,7 @@ include 'php/header.php';
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Smart Hospital na kraji města</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@ include 'php/header.php';
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Concept</a>
+                <a class="navbar-brand" href="index.html">Smart Hospital</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -140,33 +140,78 @@ include 'php/header.php';
         <!-- ============================================================== -->
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
-                    <!-- ============================================================== -->
-                    <!-- pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h2 class="pageheader-title">Události</h2>
-                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                                <div class="page-breadcrumb">
-                                    <nav aria-label="breadcrumb">
-                                        
-                                    </nav>
-                                </div>
+               <div class="container-fluid  dashboard-content">
+                <!-- ============================================================== -->
+                <!-- pageheader -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-header">
+                            <h2 class="pageheader-title">Události</h2>
+                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                            <div class="page-breadcrumb">
+                                <nav aria-label="breadcrumb">
+                                    
+                                </nav>
                             </div>
                         </div>
                     </div>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="ecommerce-widget">
-
-                        
-          
-                        
-                        
-                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- end pageheader -->
+                <!-- ============================================================== -->
+             
+                  <div class="col-12">
+                            <!-- ============================================================== -->
+                            <!-- custom content list  -->
+                            <!-- ============================================================== -->
+                            <div class="card">
+                                <h5 class="card-header">Nejnovější události</h5>
+                                <div class="card-body">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1 text-white">Pacient 18 umřel</h5>
+                                                <small>4 minutes ago</small>
+                                            </div>
+                                            <p class="mb-1">Na pokoji 42 umřel pacient 18. Kontaktujte neprodleně rodinu.</p>
+                                            <small>mrtvola</small>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">Zaneste léky pacientům</h5>
+                                                <small class="text-muted">55 minutes ago</small>
+                                            </div>
+                                            <p class="mb-1">Pacientům 5, 11 a 22 ležících na pokoji 36 je potřeba zanést jejich léky.</p>
+                                            <small class="text-muted">teplota</small>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">Zástava srdce u pacienta 7 na pokoji 11</h5>
+                                                <small class="text-muted">2 hours ago</small>
+                                            </div>
+                                            <p class="mb-1">Pacient zkolaboval. Neprodleně poskytněte první pomoc</p>
+                                            <small class="text-muted">Zástava</small>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">
+                                                <h5 class="mb-1">Zajděte si na oběd.</h5>
+                                                <small class="text-muted">5 hours ago</small>
+                                            </div>
+                                            <p class="mb-1">Máte polední pauzu. Zajděte si do nemocniční kantýny pro něco na zub.</p>
+                                            <small class="text-muted">Oběd</small>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end custom content list  -->
+                            <!-- ============================================================== -->
+                        </div>
+                   
+                    
+           
+            </div>
                 </div>
                 </div>
             </div>
