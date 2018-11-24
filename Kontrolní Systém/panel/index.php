@@ -52,7 +52,7 @@ include 'php/header.php';
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 18/3 </span> má zvýšený tep
-                                                        <div class="notification-date">12 minutes ago</div>
+                                                        <div class="notification-date">2 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -60,7 +60,7 @@ include 'php/header.php';
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 77/11</span> žádá sestru o asistenci
-                                                        <div class="notification-date">24 minutes ago</div>
+                                                        <div class="notification-date">5 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -68,7 +68,7 @@ include 'php/header.php';
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 69/7</span> má dostat obvyklé léky
-                                                        <div class="notification-date">36 minutes ago</div>
+                                                        <div class="notification-date">11 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -76,7 +76,7 @@ include 'php/header.php';
                                     </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 181.686px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
                                 </li>
                                 <li>
-                                    <div class="list-footer"> <a href="#">Zobrazit vše</a></div>
+                                    <div class="list-footer"> <a href="index.php">Zobrazit vše</a></div>
                                 </li>
                             </ul>
                         </li>
@@ -176,7 +176,7 @@ include 'php/header.php';
                                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
                                             <div class="d-flex w-100 justify-content-between">
                                                 <h5 class="mb-1 text-white">Pokoj 14 žádá URGENTNĚ sestru</h5>
-                                                <small>4 minutes ago</small>
+                                                <small>30 seconds ago</small>
                                             </div>
                                             <p class="mb-1">Na pokoji 14 je okamžitě požadována sestra!</p>
                                             <small>URGENT</small>
@@ -184,7 +184,7 @@ include 'php/header.php';
                                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="d-flex w-100 justify-content-between">
                                                 <h5 class="mb-1">Zaneste léky pacientům</h5>
-                                                <small class="text-muted">55 minutes ago</small>
+                                                <small class="text-muted">2 minutes ago</small>
                                             </div>
                                             <p class="mb-1">Pacientům 5, 11 a 22 ležících na pokoji 36 je potřeba zanést jejich léky.</p>
                                             <small class="text-muted">léky</small>
@@ -192,9 +192,9 @@ include 'php/header.php';
                                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="d-flex w-100 justify-content-between">
                                                 <h5 class="mb-1">Zajděte na pokoj 13</h5>
-                                                <small class="text-muted">2 hours ago</small>
+                                                <small class="text-muted">4 minutes ago</small>
                                             </div>
-                                            <p class="mb-1">Pacient 68/13 vyžaduje návštěvu sestry</p>
+                                            <p class="mb-1">Pacient 68 vyžaduje návštěvu sestry</p>
                                             <small class="text-muted">kontrola</small>
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
