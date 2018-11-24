@@ -44,32 +44,32 @@ include 'php/header.php';
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
-                                                        <div class="notification-date">2 min ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 25/5  </span> potřebuje Vaši pomoc!!
+                                                        <div class="notification-date">30 seconds ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
-                                                        <div class="notification-date">2 days ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 18/3 </span> žádá o resuscitaci
+                                                        <div class="notification-date">12 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
-                                                        <div class="notification-date">2 min ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 77/11</span> žádá sestru o asistenci
+                                                        <div class="notification-date">24 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
-                                                        <div class="notification-date">2 min ago</div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Pacient 69/7</span> má dostat obvyklé léky
+                                                        <div class="notification-date">36 minutes ago</div>
                                                     </div>
                                                 </div>
                                             </a>
@@ -121,7 +121,7 @@ include 'php/header.php';
                                 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="food.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Stravování</a>
+                                <a class="nav-link" href="food.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-utensil-spoon"></i>Stravování</a>
                                 
                             </li>
                             <li class="nav-item ">
