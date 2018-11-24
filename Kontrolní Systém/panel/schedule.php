@@ -117,6 +117,11 @@ include 'php/header.php';
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="schedule.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Rozpis Služeb</a>
+
+                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="food.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Stravování</a>
                                 
                             </li>
                             <li class="nav-item ">
