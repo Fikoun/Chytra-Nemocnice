@@ -16,7 +16,7 @@ if (isset($_POST))
 	echo $stmt->error;
 
 	$conn->close();
-	header("localtime: ../patients.php ");
+	header("location: ../patients.php ");
 }else{
 	header("location: ../../");}
 
