@@ -185,7 +185,7 @@ include 'php/header.php';
                                             <input value="Neduchal" name="last" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Datum narození</label>
-                                            <input value="02/10/1995" name="birth" id="inputUserName" type="date" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
+                                            <input value="1995-10-02" name="birth" id="inputUserName" type="date" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
                                         </div><div class="form-group col-12">
                                             <label for="inputUserName">Důvod Hospitalizace</label>
                                             <input value="Hnisavá Angína" name="reason" id="inputUserName" type="text" data-parsley-trigger="change" required=""  autocomplete="off" class="form-control">
