@@ -500,7 +500,7 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
 	    	}
 
 	    	setInterval(updateStats, 2000);
-
+	    	updateStats();
 	    	
 		});
 
