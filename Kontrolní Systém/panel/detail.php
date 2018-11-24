@@ -1,5 +1,20 @@
 <?php
 include 'php/header.php';
+include 'php/connect.php';
+
+
+if (!isset($_GET["id"]))
+	header("location: patients.php");
+
+$id = $_GET['id'];
+
+
+$sql = "SELECT * FROM patients WHERE id = '$id'";
+$result = mysqli_query($conn,$sql);
+$patient = mysqli_fetch_assoc($result);
+
+var_dump($patient);
+
 ?>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,7 +29,8 @@ include 'php/header.php';
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Pacient Detail</title>
+
 </head>
 
 <body>
@@ -27,7 +43,7 @@ include 'php/header.php';
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Concept</a>
+                <a class="navbar-brand" href="index.php">Smart Hospital</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -141,80 +157,327 @@ include 'php/header.php';
         <!-- ============================================================== -->
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
-                <div class="container-fluid  dashboard-content">
-                <!-- ============================================================== -->
-                <!-- pageheader -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="page-header">
-                            <h2 class="pageheader-title">Nový Pacient</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                            <div class="page-breadcrumb">
-                                <nav aria-label="breadcrumb">
-                                    
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- end pageheader -->
-                <!-- ============================================================== -->
-             
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader -->
+                    <!-- ============================================================== -->
                     <div class="row">
-                        <!-- ============================================================== -->
-                        <!-- validation form -->
-                        <!-- ============================================================== -->
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="card">
-                                <h5 class="card-header">Zadejte informace o pacientovi</h5>
-                                <div class="card-body">
-
-                                    <form class="needs-validation" novalidate="" action="php/newpatient.php" method="POST">
-                                        <div class="row"><div class="form-group col-12">
-                                            <label for="inputUserName">Křestní Jméno</label>
-                                            <input name="first" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div><div class="form-group col-12">
-                                            <label for="inputUserName">Příjmení</label>
-                                            <input name="last" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div><div class="form-group col-12">
-                                            <label for="inputUserName">Datum narození</label>
-                                            <input name="birth" id="inputUserName" type="date"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div><div class="form-group col-12">
-                                            <label for="inputUserName">Důvod Hospitalizace</label>
-                                            <input name="reason" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div><div class="form-group col-12">
-                                            <label for="inputUserName">VZP</label>
-                                            <input name="vzp" id="inputUserName" type="text"  data-parsley-trigger="change" required="" placeholder="Enter user name" autocomplete="off" class="form-control">
-                                        </div>
-    
-                                            
-                                            
-                                          
-    
-                                        </div>
-                                        <div class="form-row">
-                                            
-                                            
-                                            
-                                            
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                                                <button class="btn btn-primary" type="submit">Submit form</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                            <div class="page-header">
+                                <h3 class="mb-2">Detail Pacienta
+</h3>
+                               
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        
+                                    </nav>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- content -->
+                    <!-- ============================================================== -->
+                    <div class="row">
                         <!-- ============================================================== -->
-                        <!-- end validation form -->
+                        <!-- profile -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12">
+                            <!-- ============================================================== -->
+                            <!-- card profile -->
+                            <!-- ============================================================== -->
+                            <div class="card">
+                                <div class="card-body">
+                                    
+                                    <div class="text-center">
+                                        <h2><?= ($patient["first_name"] . " " . $patient["last_name"]) ?></h2>
+                                        
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h3 class="font-16">Narození</h3>
+                                    <div class="">
+                                        <ul class="list-unstyled mb-0">
+                                        
+                                        <li class="mb-0"><i class="fas fa-fw fa-calendar mr-2"></i><?= $patient["birth"] ?></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end card profile -->
+                            <!-- ============================================================== -->
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end profile -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- campaign data -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-9 col-lg-9 col-md-7 col-sm-12 col-12">
+                            <!-- ============================================================== -->
+                            <!-- campaign tab one -->
+                            <!-- ============================================================== -->
+                            <div class="influence-profile-content pills-regular">
+                                
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade active show" id="pills-campaign" role="tabpanel" aria-labelledby="pills-campaign-tab">
+                                        
+                                        <div class="section-block">
+                                            <h3 class="section-title">Ubytování</h3>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <div class="media influencer-profile-data d-flex align-items-center p-2">
+                                                            <div class="mr-4">
+                                                                
+                                                            </div>
+                                                            <div class="media-body ">
+                                                                <div class="influencer-profile-data">
+                                                                    <h3 class="m-b-10">Pokoj č. <?= $patient["room_number"] ?></h3>
+                                                                    <p>
+                                                                        <span class="m-r-20 d-inline-block">Postel <span class="m-l-10 text-primary"><?= $patient["unit_id"] ?></span>
+                                                                        </span>
+                                                                        
+                                                                            
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top card-footer p-0">
+                                                <div class="campaign-metrics d-xl-inline-block">
+                                                    <h4 class="mb-0">45k</h4>
+                                                    <p>Total Reach</p>
+                                                </div>
+                                                <div class="campaign-metrics d-xl-inline-block">
+                                                    <h4 class="mb-0">29k</h4>
+                                                    <p>Total Views</p>
+                                                </div>
+                                                <div class="campaign-metrics d-xl-inline-block">
+                                                    <h4 class="mb-0">5k</h4>
+                                                    <p>Total Click</p>
+                                                </div>
+                                                <div class="campaign-metrics d-xl-inline-block">
+                                                    <h4 class="mb-0">4k</h4>
+                                                    <p>Engagement</p>
+                                                </div>
+                                                <div class="campaign-metrics d-xl-inline-block">
+                                                    <h4 class="mb-0">2k</h4>
+                                                    <p>Conversion</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                <div class="section-block">
+                                                    <h2 class="section-title">My Packages</h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                                <div class="card">
+                                                    <div class="card-header bg-primary text-center p-3 ">
+                                                        <h4 class="mb-0 text-white"> Basic</h4>
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <h1 class="mb-1">$150</h1>
+                                                        <p>Per Month Plateform</p>
+                                                    </div>
+                                                    <div class="card-body border-top">
+                                                        <ul class="list-unstyled bullet-check font-14">
+                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
+                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
+                                                            <li>Daily updates on choose platforms</li>
+                                                            <li>Stronger customer service through daily interaction</li>
+                                                            <li>Monthly progress report</li>
+                                                            <li>1 Million Followers</li>
+                                                        </ul>
+                                                        <a href="#" class="btn btn-outline-secondary btn-block btn-lg">Get Started</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                                <div class="card">
+                                                    <div class="card-header bg-info text-center p-3">
+                                                        <h4 class="mb-0 text-white"> Standard</h4>
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <h1 class="mb-1">$350</h1>
+                                                        <p>Per Month Plateform</p>
+                                                    </div>
+                                                    <div class="card-body border-top">
+                                                        <ul class="list-unstyled bullet-check font-14">
+                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
+                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
+                                                            <li>Daily updates on choose platforms</li>
+                                                            <li>Stronger customer service through daily interaction</li>
+                                                            <li>Monthly progress report</li>
+                                                            <li>2 Blog Post &amp; 3 Social Post</li>
+                                                            <li>5 Millions Followers</li>
+                                                            <li>Growth Result</li>
+                                                        </ul>
+                                                        <a href="#" class="btn btn-secondary btn-block btn-lg">Get Started</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                                <div class="card">
+                                                    <div class="card-header bg-primary text-center p-3">
+                                                        <h4 class="mb-0 text-white">Premium</h4>
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <h1 class="mb-1">$550</h1>
+                                                        <p>Per Month Plateform</p>
+                                                    </div>
+                                                    <div class="card-body border-top">
+                                                        <ul class="list-unstyled bullet-check font-14">
+                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
+                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
+                                                            <li>Daily updates on choose platforms</li>
+                                                            <li>Stronger customer service through daily interaction</li>
+                                                            <li>Monthly progress report &amp; Growth Result</li>
+                                                            <li>4 Blog Post &amp; 6 Social Post</li>
+                                                        </ul>
+                                                        <a href="#" class="btn btn-secondary btn-block btn-lg">Contact us</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
+                                        <div class="card">
+                                            <h5 class="card-header">Campaign Reviews</h5>
+                                            <div class="card-body">
+                                                <div class="review-block">
+                                                    <p class="review-text font-italic m-0">“Quisque lobortis vestibulum elit, vel fermentum elit pretium et. Nullam id ultrices odio. Cras id nulla mollis, molestie diam eu, facilisis tortor. Mauris ultrices lectus laoreet commodo hendrerit. Nullam varius arcu sed aliquam imperdiet. Etiam ut luctus augue.”</p>
+                                                    <div class="rating-star mb-4">
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                    </div>
+                                                    <span class="text-dark font-weight-bold">Tabitha C. Campbell</span><small class="text-mute"> (Company name)</small>
+                                                </div>
+                                            </div>
+                                            <div class="card-body border-top">
+                                                <div class="review-block">
+                                                    <p class="review-text font-italic m-0">“Maecenas rutrum viverra augue. Nulla in eros vitae ante ullamcorper congue. Praesent tristique massa ac arcu dapibus tincidunt. Mauris arcu mi, lacinia et ipsum vel, sollicitudin laoreet risus.”</p>
+                                                    <div class="rating-star mb-4">
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                    </div>
+                                                    <span class="text-dark font-weight-bold">Luise M. Michet</span><small class="text-mute"> (Company name)</small>
+                                                </div>
+                                            </div>
+                                            <div class="card-body border-top">
+                                                <div class="review-block">
+                                                    <p class="review-text font-italic m-0">“ Cras non rutrum neque. Sed lacinia ex elit, vel viverra nisl faucibus eu. Aenean faucibus neque vestibulum condimentum maximus. In id porttitor nisi. Quisque sit amet commodo arcu, cursus pharetra elit. Nam tincidunt lobortis augueat euismod ante sodales non. ”</p>
+                                                    <div class="rating-star mb-4">
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                    </div>
+                                                    <span class="text-dark font-weight-bold">Gloria S. Castillo</span><small class="text-mute"> (Company name)</small>
+                                                </div>
+                                            </div>
+                                            <div class="card-body border-top">
+                                                <div class="review-block">
+                                                    <p class="review-text font-italic m-0">“Vestibulum cursus felis vel arcu convallis, viverra commodo felis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin non auctor est, sed lacinia velit. Orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus.”</p>
+                                                    <div class="rating-star mb-4">
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                    </div>
+                                                    <span class="text-dark font-weight-bold">Virgina G. Lightfoot</span><small class="text-mute"> (Company name)</small>
+                                                </div>
+                                            </div>
+                                            <div class="card-body border-top">
+                                                <div class="review-block">
+                                                    <p class="review-text font-italic m-0">“Integer pretium laoreet mi ultrices tincidunt. Suspendisse eget risus nec sapien malesuada ullamcorper eu ac sapien. Maecenas nulla orci, varius ac tincidunt non, ornare a sem. Aliquam sed massa volutpat, aliquet nibh sit amet, tincidunt ex. Donec interdum pharetra dignissim.”</p>
+                                                    <div class="rating-star mb-4">
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                        <i class="fa fa-fw fa-star"></i>
+                                                    </div>
+                                                    <span class="text-dark font-weight-bold">Ruby B. Matheny</span><small class="text-mute"> (Company name)</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination">
+                                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item active"><a class="page-link " href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-msg" role="tabpanel" aria-labelledby="pills-msg-tab">
+                                        <div class="card">
+                                            <h5 class="card-header">Send Messages</h5>
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="offset-xl-3 col-xl-6 offset-lg-3 col-lg-3 col-md-12 col-sm-12 col-12 p-4">
+                                                            <div class="form-group">
+                                                                <label for="name">Your Name</label>
+                                                                <input type="text" class="form-control form-control-lg" id="name" placeholder="">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="email">Your Email</label>
+                                                                <input type="email" class="form-control form-control-lg" id="email" placeholder="">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="subject">Subject</label>
+                                                                <input type="text" class="form-control form-control-lg" id="subject" placeholder="">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="messages">Messgaes</label>
+                                                                <textarea class="form-control" id="messages" rows="3"></textarea>
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary float-right">Send Message</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end campaign tab one -->
+                            <!-- ============================================================== -->
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end campaign data -->
                         <!-- ============================================================== -->
                     </div>
-                    
-                    
-           
-            </div>
+                </div>
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
