@@ -489,7 +489,7 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
 	    	var updateStats =  function () {
 	    		console.log("gettingdata");
 	    		$.ajax({
-					  url: "./php/getdata.php?id=<?= $pacient['id'] ?>"
+					  url: "./php/getdata.php?id=<?= true ? 2 : $pacient['id'] ?>"
 				})
 				.done(function( data ) {
 				      data = data.split(",");
