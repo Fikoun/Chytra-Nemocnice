@@ -4,12 +4,12 @@ include 'connect.php';
 
 if (isset($_POST))
 {
-	$stmt = $conn->prepare("INSERT INTO patients (first_name, last_name, birth, vzp, reason)
-							VALUES (?,?,?,?,?)");
+	$stmt = $conn->prepare("INSERT INTO patients (first_name, last_name, birth, vzp, reason, treatment)
+							VALUES (?,?,?,?,?,?)");
 
 
 
-	$stmt->bind_param("sssis", $_POST['first'], $_POST['last'], $_POST['birth'], $_POST['vzp'], $_POST['reason']);
+	$stmt->bind_param("sssiss", $_POST['first'], $_POST['last'], $_POST['birth'], $_POST['vzp'], $_POST['reason'], $_POST['treatment']);
 
 	$stmt->execute();
 

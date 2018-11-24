@@ -2,7 +2,7 @@
 /* připojení do databáze*/
 $servername = "localhost"; 
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "projekt_nemocnice";
 
 // Create connection
