@@ -279,7 +279,7 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
             </a>
 </h3>
                                                                     <p>
-                                                                        <span class="m-r-20 d-inline-block">Postel <span class="m-l-10 text-primary"><?= $pacient["unit_id"] ?></span>
+                                                                        <span class="m-r-20 d-inline-block">Postel <span class="m-l-10 text-primary">17</span>
                                                                         </span>
                                                                         
                                                                             
