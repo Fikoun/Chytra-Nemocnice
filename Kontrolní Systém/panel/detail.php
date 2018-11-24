@@ -225,7 +225,7 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
                                     <div class="card-body">
                                         <h5 class="text-muted">EKG</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1" id="ekg">50</h1>
+                                            <h1 class="mb-1" id="ekg"></h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                             <img src="./assets/images/ekg.gif" style="width: 100%; "> </div>
@@ -294,7 +294,7 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
                                     <div class="card-body">
                                         <h5 class="text-muted">Teplota Místnosti</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1" id="temp">50</h1>
+                                            <h1 class="mb-1" id="temp"></h1>
                                         </div>
                                         
                                     </div>
@@ -304,7 +304,7 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
                                     <div class="card-body">
                                         <h5 class="text-muted">Vlhkost Vzduchu</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1" id="hum">50</h1>
+                                            <h1 class="mb-1" id="hum"></h1>
                                         </div>
                                         
                                     </div>
