@@ -228,8 +228,7 @@ $birthDate = array_reverse(explode("-", $pacient["birth"]));
                                             <h1 class="mb-1" id="ekg">50</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <img src="./assets/images/ekg.gif" height="110px">
-                                        </div>
+                                            <img src="./assets/images/ekg.gif" style="width: 100%; "> </div>
                                     </div>
                                 </div>
                             </div>
