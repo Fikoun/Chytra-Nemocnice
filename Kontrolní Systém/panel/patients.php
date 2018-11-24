@@ -120,8 +120,8 @@ include 'php/header.php';
                                 <a class="nav-link" href="schedule.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Rozpis Služeb</a>
                                 
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="settings.php" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-cog"></i>Nastavení</a>
+                           <li class="nav-item ">
+                                <a class="nav-link" href="../prihlaseni.php" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-cog"></i>Log Out</a>
                                 
                             </li>
  
