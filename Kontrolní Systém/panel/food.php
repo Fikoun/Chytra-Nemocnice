@@ -1,7 +1,6 @@
 <?php
 include 'php/header.php';
 ?>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
@@ -18,7 +17,7 @@ include 'php/header.php';
 </head>
 
 <body>
-   <!-- ============================================================== -->
+    <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
@@ -41,7 +40,7 @@ include 'php/header.php';
                                     <div class="notification-title">Události</div>
                                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 250px;"><div class="notification-list" style="overflow: hidden; width: auto; height: 250px;">
                                         <div class="list-group">
-                                            <a href="events.php" class="list-group-item list-group-item-action active">
+                                            <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
@@ -112,19 +111,20 @@ include 'php/header.php';
                                 <a class="nav-link  collapsed" href="index.php" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fas fa-exclamation-circle"></i>Události<span class="badge badge-success">6</span></a>
                                 
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link active" href="patients.php" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fas fa-bed"></i>Pacienti</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="patients.php" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fas fa-bed"></i>Pacienti</a>
                                 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="schedule.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Rozpis Služeb</a>
+                                <a class="nav-link active" href="schedule.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Rozpis Služeb</a>
+
                                 
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="food.php" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-list"></i>Stravování</a>
                                 
                             </li>
-                           <li class="nav-item ">
+                            <li class="nav-item ">
                                 <a class="nav-link" href="../prihlaseni.php" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fas fa-cog"></i>Log Out</a>
                                 
                             </li>
@@ -145,94 +145,88 @@ include 'php/header.php';
         <!-- ============================================================== -->
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
-                    <!-- ============================================================== -->
-                    <!-- pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h2 class="pageheader-title">
-                                     <a href="index.php" class="btn btn-primary">
-                <i class="fa fa-arrow-left fa-lg"></i>
-            </a>
-                    
-                                    <a href="novy_pacient.php" class="btn btn-success float-right">
-                                        <i class="fas fa-plus fa-lg"></i>
-                                    </a>
-                                </h2>
-                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                                
+               <div class="container-fluid  dashboard-content">
+                <!-- ============================================================== -->
+                <!-- pageheader -->
+                <!-- ============================================================== -->
+               <div class="col-12">
+                            <div class="card">
+                                <h2 class="card-header">Týden od 19.11 do 26.11</h2>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Datum</th>
+                                                <th scope="col">Snídaně</th>
+                                                <th scope="col">Svačina</th>
+                                                <th scope="col">Oběd</th>
+                                                <th scope="col">Svačina</th>
+                                                <th scope="col">Večeře
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Pondělí</th>
+                                                <td>chleba</td>
+                                                <td>jablko</td>
+                                                <td>rýže</td>
+                                                <td>nic</td>
+                                                <td>brambora</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Úterý</th>
+                                                <td>rohlík</td>
+                                                <td>hruška</td>
+                                                <td>těstoviny</td>
+                                                <td>rohlík z rána</td>
+                                                <td>okurek</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Středa</th>
+                                                <td>nic</td>
+                                                <td>švestka</td>
+                                                <td>svíčková</td>
+                                                <td>banán</td>
+                                                <td>paprika</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Čtvrtek</th>
+                                                <td>jogurt</td>
+                                                <td>nic</td>
+                                                <td>rajská</td>
+                                                <td>maliny</td>
+                                                <td>rýže</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Pátek</th>
+                                                <td>chleba</td>
+                                                <td>broskev</td>
+                                                <td>Nevaří se</td>
+                                                <td>broskev</td>
+                                                <td>Nevaří se</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Sobota</th>
+                                                <td>bulka</td>
+                                                <td>jahody</td>
+                                                <td>kynuté knedlíky</td>
+                                                <td>nic</td>
+                                                <td>rýže</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Neděle</th>
+                                                <td>buchta</td>
+                                                <td>nic</td>
+                                                <td>koprovka</td>
+                                                <td>vajíčko od oběda</td>
+                                                <td>Nevaří se</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="ecommerce-widget">         
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Pacienti</h5>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead class="bg-light">
-                                                    <tr class="border-0">
-                                                        <th class="border-0">#</th>
-                                                        <th class="border-0">Jméno</th>
-                                                        <th class="border-0">pokoj</th>
-                                                        <th class="border-0">poslední kontrola</th>
-                                                        <th class="border-0">důvod hospitalizace</th>
-                                                        
-                                                        
-                                                        
-                                                        <th class="border-0">Detail</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-<?php
-include 'php/connect.php';
-
-$sql = "SELECT * FROM patients";
-$result = mysqli_query($conn,$sql);
-
-
-
-mysqli_fetch_all($result,MYSQLI_ASSOC);
-
-foreach ($result as $patient) {
-?>
-
-    <tr>
-        <td><?= $patient['id'] ?></td>
-        <td><?= $patient['first_name']." ".$patient['last_name'] ?></td>
-        <td><?= $patient['room_number'] ?></td>
-        <td>před 30 min TODO</td>
-        <td><?= $patient['reason'] ?></td>
-        <td>
-            <a href="detail.php?id=<?= $patient['id'] ?>" class="btn btn-info">
-                <i class="fas fa-eye fa-lg"></i>
-            </a>
-        </td>     
-    </tr>
-
-<?php
-}
-?>  
-                                                    
-                                                    
-                                                    
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>       
-                        </div>
-                        </div>
-                    </div>
-            </div>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
