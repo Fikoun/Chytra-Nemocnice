@@ -148,7 +148,11 @@ include 'php/header.php';
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Seznam pacientů
+                                <h2 class="pageheader-title">
+                                     <a href="index.php" class="btn btn-primary">
+                <i class="fa fa-arrow-left fa-lg"></i>
+            </a>
+                    
                                     <a href="novy_pacient.php" class="btn btn-success float-right">
                                         <i class="fas fa-plus fa-lg"></i>
                                     </a>

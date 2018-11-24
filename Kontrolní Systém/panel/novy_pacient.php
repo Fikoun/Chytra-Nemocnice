@@ -148,9 +148,10 @@ include 'php/header.php';
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Nový Pacient</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                            <div class="page-breadcrumb">
+<a href="patients.php" class="btn btn-primary">
+                <i class="fa fa-arrow-left fa-lg"></i>
+            </a>
+                    <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     
                                 </nav>

@@ -11,9 +11,9 @@ $id = $_GET['id'];
 
 $sql = "SELECT * FROM patients WHERE id = '$id'";
 $result = mysqli_query($conn,$sql);
-$patient = mysqli_fetch_assoc($result);
+$pacient = mysqli_fetch_assoc($result);
 
-var_dump($patient);
+$birthDate = array_reverse(explode("-", $pacient["birth"]));
 
 ?>
     <!-- Required meta tags -->
@@ -164,8 +164,9 @@ var_dump($patient);
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h3 class="mb-2">Detail Pacienta
-</h3>
+                                <a href="patients.php" class="btn btn-primary">
+                <i class="fa fa-arrow-left fa-lg"></i>
+            </a>
                                
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
@@ -193,7 +194,7 @@ var_dump($patient);
                                 <div class="card-body">
                                     
                                     <div class="text-center">
-                                        <h2>Raida Kokos</h2>
+                                        <h2><?= $pacient["first_name"] ?> <?= $pacient["last_name"] ?></h2>
                                         
                                     </div>
                                 </div>
@@ -203,15 +204,14 @@ var_dump($patient);
                                     <div class="">
                                         <ul class="list-unstyled mb-0">
                                         
-                                        <li class="mb-0"><i class="fas fa-fw fa-calendar mr-2"></i>2018-11-13 (věk 50 let)</li>
-                                    </ul>
+                                        <li class="mb-0"><i class="fas fa-fw fa-calendar mr-2"></i><?= $pacient["birth"] ?> (věk <?= (date("md", date("U", mktime(0, 0, 0, $birthDate[0], $birthDate[1], $birthDate[2]))) > date("md") ? ((date("Y") - $birthDate[2]) - 1) : (date("Y") - $birthDate[2])); ?>)</li> </ul>
                                     </div>
                                 </div><div class="card-body border-top">
                                     <h3 class="font-16">VZP</h3>
                                     <div class="">
                                         <ul class="list-unstyled mb-0">
                                         
-                                        <li class="mb-0"><i class="fas fa-fw fa-info-circle mr-2"></i>2131323¨¨</li>
+                                        <li class="mb-0"><i class="fas fa-fw fa-info-circle mr-2"></i><?= $pacient["vzp"] ?></li>
                                     </ul>
                                     </div>
                                 </div>
@@ -251,7 +251,7 @@ var_dump($patient);
                                                             </div>
                                                             <div class="media-body ">
                                                                 <div class="influencer-profile-data">
-                                                                    <h3 class=" m-b-10">Pokoj č. 6 
+                                                                    <h3 class=" m-b-10">Pokoj č. <?= $pacient["room_number"] ?> 
 
 <a href="detail.php?id=1" class="float-right btn btn-warning" style="
     font-size: 14px;
@@ -262,7 +262,7 @@ var_dump($patient);
             </a>
 </h3>
                                                                     <p>
-                                                                        <span class="m-r-20 d-inline-block">Postel <span class="m-l-10 text-primary">1</span>
+                                                                        <span class="m-r-20 d-inline-block">Postel <span class="m-l-10 text-primary"><?= $pacient["unit_id"] ?></span>
                                                                         </span>
                                                                         
                                                                             
@@ -278,192 +278,8 @@ var_dump($patient);
                                         
                                         
                                     </div>
-                                    <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <div class="section-block">
-                                                    <h2 class="section-title">My Packages</h2>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-primary text-center p-3 ">
-                                                        <h4 class="mb-0 text-white"> Basic</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$150</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report</li>
-                                                            <li>1 Million Followers</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-outline-secondary btn-block btn-lg">Get Started</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-info text-center p-3">
-                                                        <h4 class="mb-0 text-white"> Standard</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$350</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report</li>
-                                                            <li>2 Blog Post &amp; 3 Social Post</li>
-                                                            <li>5 Millions Followers</li>
-                                                            <li>Growth Result</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-secondary btn-block btn-lg">Get Started</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-primary text-center p-3">
-                                                        <h4 class="mb-0 text-white">Premium</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$550</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report &amp; Growth Result</li>
-                                                            <li>4 Blog Post &amp; 6 Social Post</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-secondary btn-block btn-lg">Contact us</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
-                                        <div class="card">
-                                            <h5 class="card-header">Campaign Reviews</h5>
-                                            <div class="card-body">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Quisque lobortis vestibulum elit, vel fermentum elit pretium et. Nullam id ultrices odio. Cras id nulla mollis, molestie diam eu, facilisis tortor. Mauris ultrices lectus laoreet commodo hendrerit. Nullam varius arcu sed aliquam imperdiet. Etiam ut luctus augue.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Tabitha C. Campbell</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Maecenas rutrum viverra augue. Nulla in eros vitae ante ullamcorper congue. Praesent tristique massa ac arcu dapibus tincidunt. Mauris arcu mi, lacinia et ipsum vel, sollicitudin laoreet risus.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Luise M. Michet</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“ Cras non rutrum neque. Sed lacinia ex elit, vel viverra nisl faucibus eu. Aenean faucibus neque vestibulum condimentum maximus. In id porttitor nisi. Quisque sit amet commodo arcu, cursus pharetra elit. Nam tincidunt lobortis augueat euismod ante sodales non. ”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Gloria S. Castillo</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Vestibulum cursus felis vel arcu convallis, viverra commodo felis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin non auctor est, sed lacinia velit. Orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Virgina G. Lightfoot</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Integer pretium laoreet mi ultrices tincidunt. Suspendisse eget risus nec sapien malesuada ullamcorper eu ac sapien. Maecenas nulla orci, varius ac tincidunt non, ornare a sem. Aliquam sed massa volutpat, aliquet nibh sit amet, tincidunt ex. Donec interdum pharetra dignissim.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Ruby B. Matheny</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item active"><a class="page-link " href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-msg" role="tabpanel" aria-labelledby="pills-msg-tab">
-                                        <div class="card">
-                                            <h5 class="card-header">Send Messages</h5>
-                                            <div class="card-body">
-                                                <form>
-                                                    <div class="row">
-                                                        <div class="offset-xl-3 col-xl-6 offset-lg-3 col-lg-3 col-md-12 col-sm-12 col-12 p-4">
-                                                            <div class="form-group">
-                                                                <label for="name">Your Name</label>
-                                                                <input type="text" class="form-control form-control-lg" id="name" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="email">Your Email</label>
-                                                                <input type="email" class="form-control form-control-lg" id="email" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="subject">Subject</label>
-                                                                <input type="text" class="form-control form-control-lg" id="subject" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="messages">Messgaes</label>
-                                                                <textarea class="form-control" id="messages" rows="3"></textarea>
-                                                            </div>
-                                                            <button type="submit" class="btn btn-primary float-right">Send Message</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
+                                    
                                 </div>
                             </div><div class="influence-profile-content pills-regular">
                                 
@@ -483,7 +299,7 @@ var_dump($patient);
                                                             </div>
                                                             <div class="media-body ">
                                                                 <div class="influencer-profile-data">
-                                                                    <h3 class="m-b-10">Rakovina
+                                                                    <h3 class="m-b-10"><?= $pacient["reason"] ?>
 <a href="detail.php?id=1" class="float-right btn btn-warning" style="
     font-size: 14px;
     padding: 10px 13px;
@@ -495,7 +311,7 @@ var_dump($patient);
 
 </h3>
                                                                     <p>
-                                                                        <span class="m-r-20 d-inline-block"><span class="m-l-10 text-primary">Chemoterapie a pášky cožeeeeeeeeee
+                                                                        <span class="m-r-20 d-inline-block"><span class="m-l-10 text-primary"><?= $pacient["treatment"] ?>
    </span>
                                                                         </span>
                                                                         
@@ -512,192 +328,7 @@ var_dump($patient);
                                         
                                         
                                     </div>
-                                    <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <div class="section-block">
-                                                    <h2 class="section-title">My Packages</h2>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-primary text-center p-3 ">
-                                                        <h4 class="mb-0 text-white"> Basic</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$150</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report</li>
-                                                            <li>1 Million Followers</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-outline-secondary btn-block btn-lg">Get Started</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-info text-center p-3">
-                                                        <h4 class="mb-0 text-white"> Standard</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$350</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report</li>
-                                                            <li>2 Blog Post &amp; 3 Social Post</li>
-                                                            <li>5 Millions Followers</li>
-                                                            <li>Growth Result</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-secondary btn-block btn-lg">Get Started</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-primary text-center p-3">
-                                                        <h4 class="mb-0 text-white">Premium</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$550</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report &amp; Growth Result</li>
-                                                            <li>4 Blog Post &amp; 6 Social Post</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-secondary btn-block btn-lg">Contact us</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
-                                        <div class="card">
-                                            <h5 class="card-header">Campaign Reviews</h5>
-                                            <div class="card-body">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Quisque lobortis vestibulum elit, vel fermentum elit pretium et. Nullam id ultrices odio. Cras id nulla mollis, molestie diam eu, facilisis tortor. Mauris ultrices lectus laoreet commodo hendrerit. Nullam varius arcu sed aliquam imperdiet. Etiam ut luctus augue.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Tabitha C. Campbell</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Maecenas rutrum viverra augue. Nulla in eros vitae ante ullamcorper congue. Praesent tristique massa ac arcu dapibus tincidunt. Mauris arcu mi, lacinia et ipsum vel, sollicitudin laoreet risus.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Luise M. Michet</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“ Cras non rutrum neque. Sed lacinia ex elit, vel viverra nisl faucibus eu. Aenean faucibus neque vestibulum condimentum maximus. In id porttitor nisi. Quisque sit amet commodo arcu, cursus pharetra elit. Nam tincidunt lobortis augueat euismod ante sodales non. ”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Gloria S. Castillo</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Vestibulum cursus felis vel arcu convallis, viverra commodo felis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin non auctor est, sed lacinia velit. Orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Virgina G. Lightfoot</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Integer pretium laoreet mi ultrices tincidunt. Suspendisse eget risus nec sapien malesuada ullamcorper eu ac sapien. Maecenas nulla orci, varius ac tincidunt non, ornare a sem. Aliquam sed massa volutpat, aliquet nibh sit amet, tincidunt ex. Donec interdum pharetra dignissim.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Ruby B. Matheny</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item active"><a class="page-link " href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-msg" role="tabpanel" aria-labelledby="pills-msg-tab">
-                                        <div class="card">
-                                            <h5 class="card-header">Send Messages</h5>
-                                            <div class="card-body">
-                                                <form>
-                                                    <div class="row">
-                                                        <div class="offset-xl-3 col-xl-6 offset-lg-3 col-lg-3 col-md-12 col-sm-12 col-12 p-4">
-                                                            <div class="form-group">
-                                                                <label for="name">Your Name</label>
-                                                                <input type="text" class="form-control form-control-lg" id="name" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="email">Your Email</label>
-                                                                <input type="email" class="form-control form-control-lg" id="email" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="subject">Subject</label>
-                                                                <input type="text" class="form-control form-control-lg" id="subject" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="messages">Messgaes</label>
-                                                                <textarea class="form-control" id="messages" rows="3"></textarea>
-                                                            </div>
-                                                            <button type="submit" class="btn btn-primary float-right">Send Message</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                 </div>
                             </div><div class="influence-profile-content pills-regular">
                                 
@@ -728,7 +359,7 @@ var_dump($patient);
             </a>
 </h3>
                                                                     <p>
-                                                                        <span class="m-r-20 d-inline-block">CHLEBA</span>
+                                                                        <span class="m-r-20 d-inline-block"><?= $pacient["diet"] ?></span>
                                                                         
                                                                             
                                                                     </p>
@@ -743,192 +374,8 @@ var_dump($patient);
                                         
                                         
                                     </div>
-                                    <div class="tab-pane fade" id="pills-packages" role="tabpanel" aria-labelledby="pills-packages-tab">
-                                        <div class="row">
-                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <div class="section-block">
-                                                    <h2 class="section-title">My Packages</h2>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-primary text-center p-3 ">
-                                                        <h4 class="mb-0 text-white"> Basic</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$150</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report</li>
-                                                            <li>1 Million Followers</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-outline-secondary btn-block btn-lg">Get Started</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-info text-center p-3">
-                                                        <h4 class="mb-0 text-white"> Standard</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$350</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report</li>
-                                                            <li>2 Blog Post &amp; 3 Social Post</li>
-                                                            <li>5 Millions Followers</li>
-                                                            <li>Growth Result</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-secondary btn-block btn-lg">Get Started</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                                                <div class="card">
-                                                    <div class="card-header bg-primary text-center p-3">
-                                                        <h4 class="mb-0 text-white">Premium</h4>
-                                                    </div>
-                                                    <div class="card-body text-center">
-                                                        <h1 class="mb-1">$550</h1>
-                                                        <p>Per Month Plateform</p>
-                                                    </div>
-                                                    <div class="card-body border-top">
-                                                        <ul class="list-unstyled bullet-check font-14">
-                                                            <li>Facebook, Instagram, Pinterest,Snapchat.</li>
-                                                            <li>Guaranteed follower growth for increas brand awareness.</li>
-                                                            <li>Daily updates on choose platforms</li>
-                                                            <li>Stronger customer service through daily interaction</li>
-                                                            <li>Monthly progress report &amp; Growth Result</li>
-                                                            <li>4 Blog Post &amp; 6 Social Post</li>
-                                                        </ul>
-                                                        <a href="#" class="btn btn-secondary btn-block btn-lg">Contact us</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
-                                        <div class="card">
-                                            <h5 class="card-header">Campaign Reviews</h5>
-                                            <div class="card-body">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Quisque lobortis vestibulum elit, vel fermentum elit pretium et. Nullam id ultrices odio. Cras id nulla mollis, molestie diam eu, facilisis tortor. Mauris ultrices lectus laoreet commodo hendrerit. Nullam varius arcu sed aliquam imperdiet. Etiam ut luctus augue.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Tabitha C. Campbell</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Maecenas rutrum viverra augue. Nulla in eros vitae ante ullamcorper congue. Praesent tristique massa ac arcu dapibus tincidunt. Mauris arcu mi, lacinia et ipsum vel, sollicitudin laoreet risus.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Luise M. Michet</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“ Cras non rutrum neque. Sed lacinia ex elit, vel viverra nisl faucibus eu. Aenean faucibus neque vestibulum condimentum maximus. In id porttitor nisi. Quisque sit amet commodo arcu, cursus pharetra elit. Nam tincidunt lobortis augueat euismod ante sodales non. ”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Gloria S. Castillo</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Vestibulum cursus felis vel arcu convallis, viverra commodo felis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin non auctor est, sed lacinia velit. Orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Virgina G. Lightfoot</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                            <div class="card-body border-top">
-                                                <div class="review-block">
-                                                    <p class="review-text font-italic m-0">“Integer pretium laoreet mi ultrices tincidunt. Suspendisse eget risus nec sapien malesuada ullamcorper eu ac sapien. Maecenas nulla orci, varius ac tincidunt non, ornare a sem. Aliquam sed massa volutpat, aliquet nibh sit amet, tincidunt ex. Donec interdum pharetra dignissim.”</p>
-                                                    <div class="rating-star mb-4">
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                        <i class="fa fa-fw fa-star"></i>
-                                                    </div>
-                                                    <span class="text-dark font-weight-bold">Ruby B. Matheny</span><small class="text-mute"> (Company name)</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <nav aria-label="Page navigation example">
-                                            <ul class="pagination">
-                                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item active"><a class="page-link " href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    <div class="tab-pane fade" id="pills-msg" role="tabpanel" aria-labelledby="pills-msg-tab">
-                                        <div class="card">
-                                            <h5 class="card-header">Send Messages</h5>
-                                            <div class="card-body">
-                                                <form>
-                                                    <div class="row">
-                                                        <div class="offset-xl-3 col-xl-6 offset-lg-3 col-lg-3 col-md-12 col-sm-12 col-12 p-4">
-                                                            <div class="form-group">
-                                                                <label for="name">Your Name</label>
-                                                                <input type="text" class="form-control form-control-lg" id="name" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="email">Your Email</label>
-                                                                <input type="email" class="form-control form-control-lg" id="email" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="subject">Subject</label>
-                                                                <input type="text" class="form-control form-control-lg" id="subject" placeholder="">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="messages">Messgaes</label>
-                                                                <textarea class="form-control" id="messages" rows="3"></textarea>
-                                                            </div>
-                                                            <button type="submit" class="btn btn-primary float-right">Send Message</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
                             <!-- ============================================================== -->
